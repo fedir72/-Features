@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6mu-YI-D2a">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -93,19 +93,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YfT-XW-6VJ">
-                                <rect key="frame" x="61" y="84" width="240" height="352"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YfT-XW-6VJ">
+                                <rect key="frame" x="41.5" y="94.5" width="331" height="717"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fP-L9-okI">
+                                <rect key="frame" x="74.5" y="166.5" width="265" height="573"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-bH-Fhf">
+                                <rect key="frame" x="101" y="223.5" width="212" height="459"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3W-01-DCf">
+                                <rect key="frame" x="122" y="269.5" width="170" height="367"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lhf-zw-8wz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B3W-01-DCf" firstAttribute="centerX" secondItem="Lhf-zw-8wz" secondAttribute="centerX" id="2wT-bM-ZrF"/>
+                            <constraint firstItem="u5b-bH-Fhf" firstAttribute="height" secondItem="6fP-L9-okI" secondAttribute="height" multiplier="0.8" id="4H3-ig-P5n"/>
+                            <constraint firstItem="u5b-bH-Fhf" firstAttribute="width" secondItem="6fP-L9-okI" secondAttribute="width" multiplier="0.8" id="4lb-se-KU2"/>
+                            <constraint firstItem="B3W-01-DCf" firstAttribute="centerY" secondItem="Lhf-zw-8wz" secondAttribute="centerY" id="ClY-Dw-0rL"/>
+                            <constraint firstItem="YfT-XW-6VJ" firstAttribute="centerY" secondItem="Lhf-zw-8wz" secondAttribute="centerY" id="Kru-58-7BJ"/>
+                            <constraint firstItem="u5b-bH-Fhf" firstAttribute="centerY" secondItem="Lhf-zw-8wz" secondAttribute="centerY" id="M3X-zF-fMG"/>
+                            <constraint firstItem="YfT-XW-6VJ" firstAttribute="height" secondItem="Xel-HO-itU" secondAttribute="height" multiplier="0.8" id="ZKs-hx-ivX"/>
+                            <constraint firstItem="6fP-L9-okI" firstAttribute="centerX" secondItem="Lhf-zw-8wz" secondAttribute="centerX" id="bNm-MC-S9M"/>
+                            <constraint firstItem="6fP-L9-okI" firstAttribute="width" secondItem="YfT-XW-6VJ" secondAttribute="width" multiplier="0.8" id="fse-aG-OW2"/>
+                            <constraint firstItem="B3W-01-DCf" firstAttribute="width" secondItem="u5b-bH-Fhf" secondAttribute="width" multiplier="0.8" id="gEY-wU-28M"/>
+                            <constraint firstItem="B3W-01-DCf" firstAttribute="height" secondItem="u5b-bH-Fhf" secondAttribute="height" multiplier="0.8" id="ijZ-de-cpC"/>
+                            <constraint firstItem="6fP-L9-okI" firstAttribute="centerY" secondItem="Lhf-zw-8wz" secondAttribute="centerY" id="qed-Vo-1eK"/>
+                            <constraint firstItem="YfT-XW-6VJ" firstAttribute="width" secondItem="Xel-HO-itU" secondAttribute="width" multiplier="0.8" id="sDP-2O-qKa"/>
+                            <constraint firstItem="YfT-XW-6VJ" firstAttribute="centerX" secondItem="Lhf-zw-8wz" secondAttribute="centerX" id="tOZ-cC-s9P"/>
+                            <constraint firstItem="u5b-bH-Fhf" firstAttribute="centerX" secondItem="Lhf-zw-8wz" secondAttribute="centerX" id="uBq-0p-KZW"/>
+                            <constraint firstItem="6fP-L9-okI" firstAttribute="height" secondItem="YfT-XW-6VJ" secondAttribute="height" multiplier="0.8" id="znz-dE-3Kg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAw-Yt-ebG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="507"/>
+            <point key="canvasLocation" x="989.85507246376824" y="506.91964285714283"/>
         </scene>
     </scenes>
     <resources>
