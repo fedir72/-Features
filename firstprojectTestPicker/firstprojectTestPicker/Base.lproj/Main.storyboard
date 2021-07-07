@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="firstprojectTestPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3l3-HJ-FZC">
+                                <rect key="frame" x="20" y="358" width="374" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zg-h7-S92">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="41"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="3nT-Mm-zC5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Gender">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="genderButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTj-SL-pt9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="choose gender" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvP-45-6QG">
+                                        <rect key="frame" x="90" y="0.0" width="284" height="41"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Hx0-ec-wuu"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byd-Fz-DeA">
+                                <rect key="frame" x="20" y="421" width="374" height="126"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="6a0-lz-NBm"/>
+                                </constraints>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose date of Birdth" borderStyle="roundedRect" placeholder="Date of birdth  " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Hv-a1-hVq">
+                                <rect key="frame" x="20" y="566" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="nsP-cc-Lu0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man9" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-tb-O5K">
+                                <rect key="frame" x="87" y="72" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="JLR-3M-6mM"/>
+                                    <constraint firstAttribute="width" secondItem="o9L-tb-O5K" secondAttribute="height" multiplier="1:1" id="JfL-jk-AO2"/>
+                                    <constraint firstAttribute="width" secondItem="o9L-tb-O5K" secondAttribute="height" multiplier="1:1" id="ryB-fR-MHC"/>
+                                    <constraint firstAttribute="width" constant="240" id="zDS-IW-4gh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3l3-HJ-FZC" firstAttribute="top" secondItem="o9L-tb-O5K" secondAttribute="bottom" constant="46" id="Loq-Zi-LQR"/>
+                            <constraint firstItem="3l3-HJ-FZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TeA-6X-irS"/>
+                            <constraint firstItem="1Hv-a1-hVq" firstAttribute="top" secondItem="byd-Fz-DeA" secondAttribute="bottom" constant="19" id="Thx-I1-YLM"/>
+                            <constraint firstItem="byd-Fz-DeA" firstAttribute="top" secondItem="3l3-HJ-FZC" secondAttribute="bottom" constant="22" id="Tz1-Yb-3qi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="byd-Fz-DeA" secondAttribute="trailing" constant="20" id="UCz-zP-5I0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Hv-a1-hVq" secondAttribute="trailing" constant="20" id="WEn-NO-R6k"/>
+                            <constraint firstItem="o9L-tb-O5K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XlU-hf-mc6"/>
+                            <constraint firstItem="byd-Fz-DeA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gRt-jc-nF4"/>
+                            <constraint firstItem="o9L-tb-O5K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="j9W-rY-0yI"/>
+                            <constraint firstItem="1Hv-a1-hVq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qP1-Ai-jlK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3l3-HJ-FZC" secondAttribute="trailing" constant="20" id="zvT-ae-xfg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="1Hv-a1-hVq" id="nvg-jm-Tu3"/>
+                        <outlet property="genderLabel" destination="uvP-45-6QG" id="l5D-gv-NMv"/>
+                        <outlet property="genderPicker" destination="byd-Fz-DeA" id="wxY-Fa-EMb"/>
+                        <outlet property="imageView" destination="o9L-tb-O5K" id="R6B-7K-lku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="man9" width="698" height="683"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
