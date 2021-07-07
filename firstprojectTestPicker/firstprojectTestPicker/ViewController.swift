@@ -9,12 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     //MARK: - properties
     
-    let datePicker = UIDatePicker()
-    let gendersArray = ["Male","Female","Unknown"]
+   private  let datePicker = UIDatePicker()
+   private let gendersArray = ["Male","Female","Unknown"]
     
     //MARK: - outlets
     @IBOutlet weak var imageView: UIImageView!
@@ -38,19 +36,6 @@ class ViewController: UIViewController {
     
     //MARK: -   methods
     
-    private func setup() {
-        imageView.layer.cornerRadius = imageView.frame.height/2
-        genderLabel.textColor = .blue
-        genderPicker.isHidden = true
-        dateTextField.inputView = datePicker
-        datePicker.datePickerMode = .date
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.day,.month,.year], from: Date())
-        datePicker.maximumDate = calendar.date(from: components)
-        datePicker.addTarget(self, action: #selector(dateChanged) , for: .valueChanged)
-    }
-    
-    
     @IBAction func genderButtonDidTap(_ sender: Any) {
         genderPicker.isHidden.toggle()
     }
@@ -70,9 +55,31 @@ class ViewController: UIViewController {
     
     
 }
+//MARK: - private methods
+
+private extension ViewController {
+    
+    private func setup() {
+        
+        imageView.layer.cornerRadius = imageView.frame.height/2
+        
+        genderLabel.textColor = .blue
+        genderPicker.isHidden = true
+        
+        dateTextField.inputView = datePicker
+        datePicker.datePickerMode = .date
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day,.month,.year], from: Date())
+        
+        datePicker.maximumDate = calendar.date(from: components)
+        datePicker.addTarget(self, action: #selector(dateChanged) , for: .valueChanged)
+    }
+}
+
+//MARK: - UIPickerViewDataSource
 
 extension ViewController: UIPickerViewDataSource , UIPickerViewDelegate {
-    //MARK: - UIPickerViewDataSource
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -85,12 +92,8 @@ extension ViewController: UIPickerViewDataSource , UIPickerViewDelegate {
     //MARK: - UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch row {
-        case 0: return gendersArray[row]
-        case 1: return gendersArray[row]
-        case 2: return gendersArray[row]
-        default:  return ""
-        }
+        
+        return gendersArray[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
