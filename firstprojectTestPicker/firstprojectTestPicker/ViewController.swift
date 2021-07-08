@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var genderPicker: UIPickerView!
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -32,8 +31,7 @@ class ViewController: UIViewController {
     
     }
     
-    
-    
+
     //MARK: -   methods
     
     @IBAction func genderButtonDidTap(_ sender: Any) {
@@ -48,6 +46,7 @@ class ViewController: UIViewController {
     }
     
     func getDataFropPicker() {
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy"
         dateTextField.text = "Date of birth: " + formatter.string(from: datePicker.date)
@@ -59,7 +58,7 @@ class ViewController: UIViewController {
 
 private extension ViewController {
     
-    private func setup() {
+   func setup() {
         
         imageView.layer.cornerRadius = imageView.frame.height/2
         
