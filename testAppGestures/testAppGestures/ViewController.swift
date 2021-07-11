@@ -30,13 +30,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
     }
     
     
     //MARK: - actions
-    
-   
     
     //MARK: - rotating
     @IBAction func rotationblueViewGesture(_ sender: UIRotationGestureRecognizer) {
@@ -44,28 +43,30 @@ class ViewController: UIViewController {
             obj.transform = obj.transform.rotated(by: sender.rotation) //поворот
             viewRotation += sender.rotation
             print(viewRotation)
-            sender.rotation = 0 //нынешнее положение как начальное
+            sender.rotation = 0
         }
     }
     
     
     //MARK: - single tap
     @IBAction func changeColorGesture(_ sender: UITapGestureRecognizer) {
-        print("tapgesture")
-        blueView.backgroundColor = getnextColor()
+       
+        if let attach = sender.view {
+            attach.backgroundColor = getnextColor()
+        }
     }
     
     //MARK: - slide view
     @IBAction func moveVieGesture(_ sender: UIPanGestureRecognizer) {
         
-        let transition = sender.translation(in: self.view)
+        let transition = sender.translation(in: self.view)//сдвиг
         
         if let senderView = sender.view {
             senderView.center = CGPoint(x: senderView.center.x + transition.x,
                                        y: senderView.center.y + transition.y)
         }
-     
-        sender.setTranslation(CGPoint.zero, in: self.view)
+        //обнуление результирующей точки
+         sender.setTranslation(CGPoint.zero, in: self.view)
         
     }
     @IBAction func pinchGestureBluView(_ sender: UIPinchGestureRecognizer) {
@@ -81,7 +82,8 @@ class ViewController: UIViewController {
             sender.scale = 1
         }
     }
-    //MARK: tap to mainView
+    
+    //MARK: - tap to mainView
     @IBAction func didtapMainView(_ sender: UITapGestureRecognizer) {
   
         UIView.animate(withDuration: 0.5) {
@@ -105,3 +107,12 @@ private extension ViewController {
     }
 }
 
+//MARK: - UIGestureRecognizerDelegate
+
+extension ViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+}

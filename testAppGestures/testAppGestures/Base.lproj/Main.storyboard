@@ -44,7 +44,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="blueView" destination="Knb-Pk-bZy" id="yn6-w6-zvz"/>
+                        <outlet property="blueView" destination="Knb-Pk-bZy" id="Uyj-dz-l37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -61,11 +61,13 @@
                 <rotationGestureRecognizer id="B92-5B-Oy8">
                     <connections>
                         <action selector="rotationblueViewGesture:" destination="BYZ-38-t0r" id="6qz-QB-Obl"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="jmq-wF-eC9"/>
                     </connections>
                 </rotationGestureRecognizer>
                 <pinchGestureRecognizer id="WWm-6A-oMR">
                     <connections>
                         <action selector="pinchGestureBluView:" destination="BYZ-38-t0r" id="YAz-2y-2sc"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="LqD-RV-W7Y"/>
                     </connections>
                 </pinchGestureRecognizer>
                 <tapGestureRecognizer id="Lwf-e3-c76">
