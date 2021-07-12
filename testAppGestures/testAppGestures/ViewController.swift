@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     private let colours:[UIColor] = [.red,.yellow,.green,.orange]
     
-    var indexer: Int = 0 {
+    private var indexer: Int = 0 {
         didSet { if indexer == colours.count {indexer = 0} }
     }
     
@@ -104,7 +104,6 @@ private extension ViewController {
         let color = colours[indexer]
         indexer+=1
         return color
-        
     }
 }
 
