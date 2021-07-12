@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     //MARK: - outlets
     
-    @IBOutlet weak var blueView: UIView!
+    @IBOutlet private weak var blueView: UIView!
     
     //MARK: - viewDidLoad()
     
@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     
     //MARK: - rotating
     @IBAction func rotationblueViewGesture(_ sender: UIRotationGestureRecognizer) {
+        
         if let obj = sender.view {
             obj.transform = obj.transform.rotated(by: sender.rotation) //поворот
             viewRotation += sender.rotation
